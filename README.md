@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/ipagdevs/monolog-discord-handler.svg)](https://packagist.org/packages/ipagdevs/monolog-discord-handler)
 [![License](https://img.shields.io/packagist/l/ipagdevs/monolog-discord-handler.svg)](https://packagist.org/packages/ipagdevs/monolog-discord-handler)
 [![PHP Version](https://img.shields.io/packagist/dependency-v/ipagdevs/monolog-discord-handler/php)](https://packagist.org/packages/ipagdevs/monolog-discord-handler)
-[![Build Status](https://github.com/ipagdevs/monolog-discord-handler/actions/workflows/tests.yml/badge.svg)](https://github.com/ipagdevs/monolog-discord-handler/actions)
+[![Build Status](https://github.com/ipagdevs/monolog-discord-handler/actions/workflows/tests.yml/badge.svg)](https://github.com/ipagdevs/monolog-discord-handler/actions/workflows/test.yml)
 
 Send Monolog logs directly to a Discord webhook using rich embeds, automatic formatting, and safe value normalization.
 
