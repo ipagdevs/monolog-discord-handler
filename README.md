@@ -1,4 +1,4 @@
-# 📣 Monolog Discord Handler
+# Monolog Discord Handler
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ipagdevs/monolog-discord-handler.svg)](https://packagist.org/packages/ipagdevs/monolog-discord-handler)
 [![Total Downloads](https://img.shields.io/packagist/dt/ipagdevs/monolog-discord-handler.svg)](https://packagist.org/packages/ipagdevs/monolog-discord-handler)
@@ -10,15 +10,15 @@ Send Monolog logs directly to a Discord webhook using rich embeds, automatic for
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 composer require ipagdevs/monolog-discord-handler
-```
+````
 
 ---
 
-## ⚙️ Usage (Plain Monolog)
+## Usage (Plain Monolog)
 
 ```php
 use Monolog\Logger;
@@ -42,24 +42,24 @@ $logger->error('System error occurred', [
 
 ---
 
-## 🧩 How it works
+## How it works
 
 The handler automatically:
 
-* Converts logs into Discord **embeds**
+* Converts logs into Discord embeds
 * Respects Discord field and message limits
-* Normalizes any kind of value:
+* Normalizes values:
 
-  * `array` / `object` → pretty JSON
-  * `Throwable` → formatted stacktrace block
-  * `Closure` → `callable[closure]`
-  * string callables → `callable:method`
+  * array/object → pretty JSON
+  * Throwable → formatted stacktrace block
+  * Closure → callable[closure]
+  * string callables → callable:method
 * Safely truncates large payloads
 * Prevents application crashes (fail-safe HTTP handling)
 
 ---
 
-## 🧪 Laravel Usage
+## Laravel Usage
 
 In `config/logging.php`:
 
@@ -84,7 +84,7 @@ DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/xxx
 
 ---
 
-## 🧠 Example
+## Example
 
 ```php
 Log::error('Payment failed', [
@@ -105,18 +105,7 @@ This will be sent to Discord as an embed with:
 
 ---
 
-## 📦 Features
-
-* 📊 Discord embeds support
-* 🧠 Smart value normalization
-* ⚡ Payload size protection
-* 🧾 Exception stacktrace formatting
-* 🔇 Fail-safe (never breaks your app)
-* 🧩 Monolog v3 compatible
-
----
-
-## 🧯 Safety
+## Safety
 
 This handler is designed to be safe by default:
 
@@ -126,6 +115,6 @@ This handler is designed to be safe by default:
 
 ---
 
-## 📜 License
+## License
 
-MIT
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
