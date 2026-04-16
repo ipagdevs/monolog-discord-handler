@@ -8,7 +8,7 @@ describe('DiscordField::create', function () {
         $field = DiscordField::create('key', 'value');
         $data = $field->jsonSerialize();
 
-        expect($data['name'])->toBe('key')
+        expect($data['name'])->toBe(ucfirst('key'))
             ->and($data['value'])->toBe('value')
             ->and($data['inline'])->toBeTrue();
     });

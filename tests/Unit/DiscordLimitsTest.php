@@ -70,7 +70,7 @@ describe('DiscordLimits constants', function () {
     it('defines expected Discord API limits', function () {
         expect(DiscordLimits::FIELD_NAME)->toBe(256)
             ->and(DiscordLimits::FIELD_VALUE)->toBe(1024)
-            ->and(DiscordLimits::MESSAGE)->toBe(2048)
+            ->and(DiscordLimits::MESSAGE)->toBe(500)
             ->and(DiscordLimits::DESCRIPTION)->toBe(4096)
             ->and(DiscordLimits::MAX_FIELDS)->toBe(25);
     });

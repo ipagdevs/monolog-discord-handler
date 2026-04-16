@@ -6,7 +6,7 @@ final class DiscordLimits
 {
     public const FIELD_NAME = 256;
     public const FIELD_VALUE = 1024;
-    public const MESSAGE = 2048;
+    public const MESSAGE = 500;
     public const DESCRIPTION = 4096;
     public const MAX_FIELDS = 25;
 

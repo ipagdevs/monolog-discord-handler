@@ -66,8 +66,8 @@ describe('DiscordPayload::from', function () {
         $data = $payload->jsonSerialize();
         $fieldNames = array_column($data['embeds'][0]['fields'], 'name');
 
-        expect($fieldNames)->toContain('user_id')
-            ->and($fieldNames)->toContain('action');
+        expect($fieldNames)->toContain(ucfirst('user_id'))
+            ->and($fieldNames)->toContain(ucfirst('action'));
     });
 
     it('always includes channel and timestamp fields', function () {
@@ -77,8 +77,8 @@ describe('DiscordPayload::from', function () {
         $data = $payload->jsonSerialize();
         $fieldNames = array_column($data['embeds'][0]['fields'], 'name');
 
-        expect($fieldNames)->toContain('channel')
-            ->and($fieldNames)->toContain('timestamp');
+        expect($fieldNames)->toContain(ucfirst('channel'))
+            ->and($fieldNames)->toContain(ucfirst('timestamp'));
     });
 
     it('sets correct color for each log level', function (Level $level, int $expectedColor) {

@@ -73,23 +73,20 @@ final class DiscordValueNormalizer
     private static function exception(Throwable $e): string
     {
         $header = sprintf(
-            "%s: %s\n%s:%d",
+            "**%s**: %s\n**File**: %s:%d",
             $e::class,
-            $e->getMessage(),
+            DiscordLimits::truncate($e->getMessage(), DiscordLimits::MESSAGE),
             $e->getFile(),
             $e->getLine()
         );
 
         $trace = self::reduceTrace($e);
 
-        $content = $header . "\n\n" . $trace;
+        $content = $header . "\n" . $trace;
 
-        $content = DiscordLimits::truncate(
-            $content,
-            DiscordLimits::FIELD_VALUE - 20
-        );
+        $content = DiscordLimits::truncate($content, DiscordLimits::FIELD_VALUE);
 
-        return "```text\n{$content}\n```";
+        return $content;
     }
 
     private static function reduceTrace(Throwable $e, int $limit = 12): string

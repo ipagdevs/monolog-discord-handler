@@ -135,7 +135,7 @@ describe('DiscordHandler::handle (write)', function () {
             ->with('POST', $this->anything(), $this->callback(function (array $options) {
                 $fields = $options['json']['embeds'][0]['fields'] ?? [];
                 $names = array_column($fields, 'name');
-                return in_array('user_id', $names);
+                return in_array(ucfirst('user_id'), $names);
             }))
             ->willReturn($mockResponse);
 

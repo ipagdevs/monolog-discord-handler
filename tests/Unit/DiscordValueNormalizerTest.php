@@ -87,10 +87,8 @@ describe('DiscordValueNormalizer::normalize', function () {
 
         $result = DiscordValueNormalizer::normalize($exception);
 
-        expect($result)->toContain('```text')
-            ->and($result)->toContain('RuntimeException')
-            ->and($result)->toContain('Something went wrong')
-            ->and($result)->toEndWith('```');
+        expect($result)->toContain('RuntimeException')
+            ->and($result)->toContain('Something went wrong');
     });
 
     it('truncates a long exception trace to FIELD_VALUE limit', function () {

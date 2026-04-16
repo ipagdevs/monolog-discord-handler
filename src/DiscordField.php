@@ -12,7 +12,7 @@ class DiscordField implements JsonSerializable
     public static function create(string $key, mixed $value): self
     {
         return new self(
-            DiscordLimits::truncate($key, DiscordLimits::FIELD_NAME),
+            ucfirst(DiscordLimits::truncate($key, DiscordLimits::FIELD_NAME)),
             DiscordValueNormalizer::normalize($value),
             $value instanceof Throwable ? false : true
         );
